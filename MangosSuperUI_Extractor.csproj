@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AssemblyName>MangosSuperUI_Extractor</AssemblyName>
+		<RootNamespace>MangosSuperUI_Extractor</RootNamespace>
+		<Version>1.0.0</Version>
+		<Authors>MangosSuperUI</Authors>
+		<Description>WoW 1.12.1 MPQ Asset Extractor — opens raw MPQ archives, extracts and converts BLP textures to PNG, organizes assets by category.</Description>
+		<ApplicationIcon>favicon.ico</ApplicationIcon>
+		<NoWin32Manifest>true</NoWin32Manifest>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="favicon.ico">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="War3Net.IO.Mpq" Version="5.8.1" />
+		<PackageReference Include="War3Net.Drawing.Blp" Version="5.8.1" />
+		<PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+		<PackageReference Include="SharpGLTF.Toolkit" Version="1.0.6" />
+	</ItemGroup>
+
+</Project>

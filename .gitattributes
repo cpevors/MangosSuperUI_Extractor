@@ -1,0 +1,43 @@
+###############################################################################
+# Set default behavior to automatically normalize line endings.
+###############################################################################
+* text=auto
+
+###############################################################################
+# Set the merge driver for project and solution files
+#
+# Merging from the command prompt will add diff markers to the files if there
+# are conflicts (Alarm! Alarm!). The temporary الحل* files created by git
+# will not be removed because of the way diff markers and .sln content is
+# mixed. Fix the conflict markers, currentRemove the temporary files.
+###############################################################################
+*.sln        text eol=crlf merge=binary
+*.csproj     text eol=crlf merge=binary
+
+###############################################################################
+# Behavior for specific file types
+###############################################################################
+
+# Source code
+*.cs         text diff=csharp
+*.json       text
+*.xml        text
+*.md         text
+*.txt        text
+
+# Windows-specific
+*.cmd        text eol=crlf
+*.bat        text eol=crlf
+*.ps1        text eol=crlf
+
+# Binary
+*.png        binary
+*.jpg        binary
+*.gif        binary
+*.ico        binary
+*.glb        binary
+*.dbc        binary
+*.blp        binary
+*.mpq        binary
+*.m2         binary
+*.mdx        binary

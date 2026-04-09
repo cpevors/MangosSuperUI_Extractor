@@ -1,0 +1,82 @@
+## .NET / Visual Studio
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Visual Studio
+.vs/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+[Dd]esktop[Ii]ni
+[Tt]humbs.db
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+launchSettings.json
+
+## Rider / JetBrains
+.idea/
+*.sln.iml
+
+## Windows
+[Tt]humbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+## macOS (just in case)
+.DS_Store
+.AppleDouble
+.LSOverride
+
+## Extracted output (don't commit extracted assets)
+output/
+extracted/
+minimap/
+icons/
+worldmaps/
+dbc/
+creatures/
+items/
+models/
+item_models/
+manifests/
+creature_textures/
+item_textures/
