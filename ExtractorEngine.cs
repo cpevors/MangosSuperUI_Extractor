@@ -236,11 +236,28 @@ public class ExtractorEngine
                 continue;
             }
 
+            // Preserve the folder casing from TRS (e.g. "Azeroth", "Kalimdor") —
+            // MangosSuperUI's HeightMapService and Leaflet tile layer expect the
+            // original WoW map names with proper casing. Only the tile filename
+            // portion (e.g. "map29_28") is lowercased.
+            var lastSlash = outputName.LastIndexOf('/');
+            string finalOutput;
+            if (lastSlash >= 0)
+            {
+                var folder = outputName.Substring(0, lastSlash + 1);
+                var file = outputName.Substring(lastSlash + 1).ToLowerInvariant();
+                finalOutput = folder + file + ".png";
+            }
+            else
+            {
+                finalOutput = outputName.ToLowerInvariant() + ".png";
+            }
+
             cat.Files.Add(new AssetFile
             {
                 MpqName = mpqName,
                 MpqPath = filePath,
-                OutputName = outputName.ToLowerInvariant() + ".png",
+                OutputName = finalOutput,
                 ConvertBlpToPng = true
             });
         }
